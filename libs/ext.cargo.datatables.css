@@ -1,15 +1,58 @@
-td.details-control {
-    width: 20px;
-    background: url('DataTables/images/details_open.png') no-repeat center center;
-    cursor: pointer;
+.dt-container {
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-block: 1rem;
+    border: 1px solid var(--border-color-base);
+    border-radius: 6px;
+    line-height: 1.375;
+    position: relative;
+    clear: both;
 }
 
-tr.shown td.details-control {
-    background: url('DataTables/images/details_close.png') no-repeat center center;
+.dt-layout-row {
+    width: auto !important;
+    margin: 0;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.dt-layout-row:not(.dt-layout-table) {
+    padding: 12px;
 }
 
-tfoot input {
-    width: 100%;
-    padding: 3px;
-    box-sizing: border-box;
+div.dt-container div.dt-layout-row div.dt-layout-cell {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dt-layout-table > div {
+  display: block;
+}
+
+.dt-layout-full {
+  width: 100%;
+}
+
+div.dt-container select.dt-input {
+    background-color: var(--background-color-interactive-subtle--hover,#eaecf0);
+}
+
+table.cargoDynamicTable thead > tr > th {
+  padding: 12px;
+  border-bottom-color: var(--border-color-base);
+}       
+
+table.dataTable > thead > tr > th {
+    border-top: 1px solid var(--border-color-base);
+}
+
+table.dataTable th.dt-type-numeric div.dt-column-header, table.dataTable th.dt-type-numeric div.dt-column-footer, table.dataTable th.dt-type-date div.dt-column-header, table.dataTable th.dt-type-date div.dt-column-footer, table.dataTable td.dt-type-numeric div.dt-column-header, table.dataTable td.dt-type-numeric div.dt-column-footer, table.dataTable td.dt-type-date div.dt-column-header, table.dataTable td.dt-type-date div.dt-column-footer {
+    flex-direction: row;
+}
+
+table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date, table.dataTable td.dt-type-numeric, table.dataTable td.dt-type-date {
+    text-align: left;
 }
