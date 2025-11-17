@@ -79,7 +79,7 @@ class CargoTableFormat extends CargoDisplayFormat {
 			$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
 		}
 
-		$tableClass = 'cargoTable';
+		$tableClass = 'wikitable';
 		if ( $mergeSimilarCells ) {
 			$tableClass .= ' mergeSimilarCells';
 		} else {
