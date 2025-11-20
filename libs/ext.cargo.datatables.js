@@ -5,6 +5,8 @@ $(document).ready(function() {
 
         let params = {
             scrollX: true,
+		    processing: true, 
+		    serverSide: true, 
             language: { search: "" },
             columns: []
         };
