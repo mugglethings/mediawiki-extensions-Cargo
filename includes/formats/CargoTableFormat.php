@@ -14,6 +14,7 @@ class CargoTableFormat extends CargoDisplayFormat {
 		return [
 			'merge similar cells' => [ 'type' => 'boolean' ],
 			'edit link' => [ 'type' => 'boolean' ],
+			'class' => [ 'type' => 'string' ],
 		];
 	}
 
@@ -84,6 +85,15 @@ class CargoTableFormat extends CargoDisplayFormat {
 			$tableClass .= ' mergeSimilarCells';
 		} else {
 			$tableClass .= ' noMerge sortable';
+		}
+
+		$customClass = null;
+		if(array_key_exists( 'class', $displayParams )) {
+			$customClass = htmlspecialchars( $displayParams['class'] );
+		}
+
+		if( $customClass ) {
+			$tableClass .= ' ' . $customClass;
 		}
 
 		$text = "<table class=\"$tableClass\">";
