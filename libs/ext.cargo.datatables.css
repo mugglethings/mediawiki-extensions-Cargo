@@ -50,8 +50,17 @@ table.cargoDynamicTable thead > tr > th {
     white-space: nowrap;
 }
 
+table.dataTable.stripe > tbody > tr:nth-child(2n+1) > *, table.dataTable.display > tbody > tr:nth-child(2n+1) > * {
+    background-color: var(--background-color-neutral-subtle,#f8f9fa);
+}
+
 table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
     border-top-color: var(--border-color-base);
+}
+
+table.dataTable.hover > tbody > tr:hover > *, table.dataTable.display > tbody > tr:hover > * {
+    box-shadow: none;
+    background-color: var(--background-color-interactive,#eaecf0);
 }
 
 table.dataTable th.dt-type-numeric div.dt-column-header, table.dataTable th.dt-type-numeric div.dt-column-footer, table.dataTable th.dt-type-date div.dt-column-header, table.dataTable th.dt-type-date div.dt-column-footer, table.dataTable td.dt-type-numeric div.dt-column-header, table.dataTable td.dt-type-numeric div.dt-column-footer, table.dataTable td.dt-type-date div.dt-column-header, table.dataTable td.dt-type-date div.dt-column-footer {
