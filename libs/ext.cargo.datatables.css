@@ -9,6 +9,7 @@
     clear: both;
 }
 
+
 .dt-layout-row {
     width: auto !important;
     margin: 0;
@@ -36,8 +37,10 @@ div.dt-container div.dt-layout-row div.dt-layout-cell {
     width: 100%;
 }
 
-div.dt-container select.dt-input {
+div.dt-container .dt-input, div.dt-container .dt-search input {
     background-color: var(--background-color-interactive-subtle--hover,#eaecf0);
+    border: var(--border-width-base) solid var(--border-color-interactive);
+    border-radius: 0;
 }
 
 table.cargoDynamicTable thead > tr > th {
@@ -45,6 +48,10 @@ table.cargoDynamicTable thead > tr > th {
     border-bottom-color: var(--border-color-base);
     border-top: 1px solid var(--border-color-base);
     white-space: nowrap;
+}
+
+table.dataTable.row-border tbody th, table.dataTable.row-border tbody td, table.dataTable.display tbody th, table.dataTable.display tbody td {
+    border-top-color: var(--border-color-base);
 }
 
 table.dataTable th.dt-type-numeric div.dt-column-header, table.dataTable th.dt-type-numeric div.dt-column-footer, table.dataTable th.dt-type-date div.dt-column-header, table.dataTable th.dt-type-date div.dt-column-footer, table.dataTable td.dt-type-numeric div.dt-column-header, table.dataTable td.dt-type-numeric div.dt-column-footer, table.dataTable td.dt-type-date div.dt-column-header, table.dataTable td.dt-type-date div.dt-column-footer {
