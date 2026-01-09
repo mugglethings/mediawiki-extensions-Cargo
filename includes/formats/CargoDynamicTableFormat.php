@@ -151,29 +151,7 @@ class CargoDynamicTableFormat extends CargoDisplayFormat {
 			}
 		}
 
-		$tableContents .= '</tr></thead><tfoot><tr>';
-
-		if ( $detailsFields ) {
-			$tableContents .= Html::rawElement( 'th', [ 'class' => 'details-control' ] );
-		}
-		foreach ( $fieldDescriptions as $fieldName => $fieldDescription ) {
-			if ( in_array( $fieldName, $detailsFields ) ) {
-				continue;
-			}
-			if ( $searchableColumns ) {
-				$placeholder = wfMessage( 'cargo-dynamictables-searchcolumn', $fieldName )->escaped();
-				$attribs = [ 'data-placeholder' => $placeholder ];
-			} else {
-				$attribs = null;
-			}
-			if ( strpos( $fieldName, 'Blank value ' ) === false ) {
-				$tableContents .= "\t\t\t\t" . Html::element( 'th', $attribs, $fieldName );
-			} else {
-				$tableContents .= "\t\t\t\t" . Html::element( 'th', $attribs, null );
-			}
-		}
-
-		$tableContents .= '</tr></tfoot><tbody>';
+		$tableContents .= '</tr></thead><tbody>';
 
 		foreach ( $formattedValuesTable as $rowNum => $row ) {
 			if ( $detailsFields ) {
